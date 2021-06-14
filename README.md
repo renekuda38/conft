@@ -1,1 +1,1 @@
-# conft
+## Pozri Wiki pre vývojársku dokumentáciu
