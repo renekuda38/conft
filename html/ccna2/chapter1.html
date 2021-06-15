@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CONFT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../style/style_ccna_chapters.css">
+
+    <!-- $IKONA V TABE V BROWSERI -->
+    <link rel="shortcut icon" href="../../images/logo/logo_tab_icon.png" type="image/x-icon">
+    <!-- IKONA V TABE V BROWSERI$ -->
+    
+    <script>
+        $(function () 
+        {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+    <!-- $HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/logo/logo.png" alt="logo" style="width:50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about_author.html">About author</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ccna1/ccna1.html">CCNA 1</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="ccna2.html">CCNA 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="popover" data-placement="bottom" title="CCNA 3 v7.0" 
+                    data-content="This course is already in progress. Stay tuned.">CCNA 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE$ -->
+
+    
+    <div class="bd-toc">
+        <div class="container-fluid">
+            <div class="row">
+            
+                <!-- $SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU -->
+                <nav class="col-3" id="myScrollspy">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1">Switch Boot Sequence</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">The boot system command</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Recovering from a System Crash</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">Switch Management Access</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU$ -->
+
+                <!-- $KONTENT-->
+                <div class="col-lg-9 col-sm-12 chapter-content">
+                    <h1 class="text-white display-4">Chapter 1 - Basic Device Configuration</h1>
+                    <h1 class="nadpis-h1-vynimka">Configure a Switch with Initial Settings</h1>
+
+                    <div id="section1" class="">    
+                        <h2>Switch Boot Sequence</h2>
+                        <p>After a Cisco switch is powered on, it goes through 5-step boot sequence</p>
+                        <ul>
+                            <li>Step 1</li>
+                            <ul>
+                                <li>switch load a power-on self-test POST program stored in ROM</li>
+                                <li>POST checks the CPU subsystem</li>
+                                <li>it test CPU, DRAM and the portion of the flash device that makes up the flash file system</li>
+                            </ul>
+                            <li>Step 2</li>
+                            <ul>
+                                <li>switch loads the boot loader SW</li>
+                                <li>boot loader is small program stored in ROM, run immediately after POST is successful</li>
+                            </ul>
+                            <li>Step 3</li>
+                            <ul>
+                                <li>boot loader performs low-level CPU initialization </li>
+                                <li>it initializes the CPU registers (registers control where a physical memory is mapped, the quantity of memory and its speed)</li>
+                            </ul>
+                            <li>Step 4</li>
+                            <ul>
+                                <li>boot loader initializes the flash file system on the system board</li>
+                            </ul>
+                            <li>Step 5</li>
+                            <ul>
+                                <li>finally the boot loader locates and loads a default IOS operating system SW image into memory and gives control of the switch over to the IOS</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div id="section2" class=""> 
+                        <h2>The <code style="background-color: white; border-radius: 5px;">boot system</code> command</h2>
+                        <p>If the BOOT variable is not set, switch will load and execute the first executable file it can find while starting.</p>
+                        <p>On Cisco switches (2960) the image file is normally contained in a directory that has the same name as the image file:</p>
+                        <p><code style="margin-left: 30px;">S1(config)# boot system flash:/c2960-lanbasek9-mz.150-2.SE/c2960-lanbasek9-mz.150-2.SE.bin</code></p>
+                        <p>Then Cisco IOS commands initializes the interfaces from startup-config file (config.txt, located in flash)</p>
+                        <p><code>show boot</code>- see what the current IOS boot file is set to</p>
+                    </div>        
+
+                    <div id="section3" class="">         
+                        <h2>Recovering from a System Crash</h2>
+                        <p>The boot loader provides access into the switch if the operating system cannot be used (missing or damaged system files).</p>
+                        <p>The boot loader has a command line —> access to files in flash memory</p>
+                        <p>he boot loader commands support initializing flash, formatting flash, installing a new IOS, 
+                            changing the BOOT environment variable and recovery of lost or forgotten passwords.
+                        </p>
+                    </div>
+
+                    <div id="section4" class="">         
+                        <h2>Switch Management Access</h2>
+                        <p>Remote access - switch must be configured with an IP address and a subnet mask</p>
+                        <p>Remote network - switch must have configured default gateway</p>
+                        <p>Note: The switch may need to be configured for IPv6. For example, before you can configure IPv6 addressing
+                            on a Cisco Catalyst 2960 running IOS version 15.0, you will need to enter the global configuration command 
+                            <code>sdm prefer dual-ipv4-and-ipv6 default</code> and then reload the switch.
+                        </p>
+                    </div>
+                    <!-- $STAV ŠTÚDIA CHAPTERU -->
+                    <div class="state-buttons">
+                        <button type="button" class="btn btn-outline-success done btn-lg" id="tl4" data-toggle="modal" data-target="#modalStateDone">Done</button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalStateDone" role="dialog">
+                            <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 style="color: black;" class="modal-title">Are you really done with this chapter?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color: black;">
+                                            If you are really done with this chapter click "Yes, I am done". Then we can
+                                            decide if you are ready for the final test.
+                                            If you are not done with this chapter click "Close".
+                                        </p>
+                                        <button onclick="chapterDone()" style="margin-left: 10px;" class="btn btn-dark chapterDone" role="button" id="chapterDone">Yes, I am done</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- STAV ŠTÚDIA CHAPTERU$ -->
+                </div>
+                <!-- KONTENT$-->
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-primary text-white text-center text-lg-start footer">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background: linear-gradient(to bottom,#ffbb59 0%, #ff654d 100%)">
+            © 2021 Copyright: René Martin Kuda, SPŠT Spišská Nová Ves, IST, 3.D
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+<!-- BODY UPRAVENÉ PRE SCROLLSPY, "data-offset="80"" JE POSUNUTIE, KEDY SA MÁ MENIŤ AKTÍVNY ODKAZ V SCROLLSPY VZHĽADOM NA KONTENTU$ -->
+
+<script 
+    src="../../javascript/script.js">
+</script>
+
+</html>

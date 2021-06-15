@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CONFT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../style/style_ccna_chapters.css">
+
+    <!-- $IKONA V TABE V BROWSERI -->
+    <link rel="shortcut icon" href="../../images//logo/logo_tab_icon.png" type="image/x-icon">
+    <!-- IKONA V TABE V BROWSERI$ -->
+    
+    <script>
+        $(function () 
+        {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+    <!-- $HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/logo/logo.png" alt="logo" style="width:50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about_author.html">About author</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ccna1/ccna1.html">CCNA 1</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="ccna2.html">CCNA 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="popover" data-placement="bottom" title="CCNA 3 v7.0" 
+                    data-content="This course is already in progress. Stay tuned.">CCNA 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test.html">Test</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE$ -->
+
+    
+    <div class="bd-toc">
+        <div class="container-fluid">
+            <div class="row">
+            
+                <!-- $SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU -->
+                <nav class="col-3" id="myScrollspy">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1">Defining VLAN Trunks</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">Network without VLANs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Network with VLANs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">VLAN Identification with a Tag</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU$ -->
+
+                <!-- $KONTENT-->
+                <div class="col-lg-9 col-sm-12 chapter-content">
+                    <h1 class="text-white display-4">Chapter 3 - VLANs</h1>
+                    <h1 class="nadpis-h1-vynimka">VLANs in Multi-Switched Environment</h1>
+
+                    <div id="section1" class="text-justify">    
+                        <h2>Defining VLAN Trunks</h2>
+                        <li>VLANs would not be very useful without VLAN trunks</li>
+                        <li>VLAN trunk allow traffic between switches </li>
+                        <li>devices in same VLAN on different switches can communicate with each other</li>
+                        <li>trunk is point-to-point link between two network devices that carries more than one VLAN</li>
+                        <li>VLAN trunk does not belong to the specific VLAN</li>
+                        <br>
+                        <img src="../../images/ccna2/chapter3/defining_vlans.jpg" class="img-fluid" style="max-width: 100%; height: auto" alt="Defining VLANs">
+                    </div>
+
+                    <div id="section2" class=""> 
+                        <h2>Network without VLANs</h2>
+                        <div class="view">
+                            <video class="video-fluid" autoplay loop muted>
+                                <source src="../../images/ccna2/chapter3/network_without_vlans.mov" type="video/mp4" alt="Network without VLANs video"/>
+                            </video>
+                        </div>
+                    </div>        
+
+                    <div id="section3" class="">         
+                        <h2>Network with VLANs</h2>
+                        <div class="view">
+                            <video class="video-fluid" autoplay loop muted>
+                                <source src="../../images/ccna2/chapter3/network_with_vlans.mov" type="video/mp4" alt="Network with VLANs video"/>
+                            </video>
+                        </div>
+                    </div>
+
+                    <div id="section4" class="">         
+                        <h2>VLAN Identification with a Tag</h2>
+                        <p>When Ethernet frame is placed on the trunk, info about the VLANs to which they belong must be added (switch add it) —> 
+                            process is called tagging (4-byte number inserted within the original Ethernet header. It specifies the VLAN to which the frame belongs.
+                        </p>
+                        <img src="../../images/ccna2/chapter3/vlan_tag.jpg" class="img-fluid" style="max-width: 100%; height: auto" alt="VLAN Tag's parts">
+                    </div>
+                    <!-- $STAV ŠTÚDIA CHAPTERU -->
+                    <div class="state-buttons">
+                        <button type="button" class="btn btn-outline-success done btn-lg" id="tl6" data-toggle="modal" data-target="#modalStateDone">Done</button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalStateDone" role="dialog">
+                            <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 style="color: black;" class="modal-title">Are you really done with this chapter?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color: black;">
+                                            If you are really done with this chapter click "Yes, I am done". Then we can
+                                            decide if you are ready for the final test.
+                                            If you are not done with this chapter click "Close".
+                                        </p>
+                                        <button onclick="chapterDone()" style="margin-left: 10px;" class="btn btn-dark chapterDone" role="button" id="chapterDone">Yes, I am done</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- STAV ŠTÚDIA CHAPTERU$ -->
+                </div>
+                <!-- KONTENT$-->
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-primary text-white text-center text-lg-start footer">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background: linear-gradient(to bottom,#ffbb59 0%, #ff654d 100%)">
+            © 2021 Copyright: René Martin Kuda, SPŠT Spišská Nová Ves, IST, 3.D
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+<!-- BODY UPRAVENÉ PRE SCROLLSPY, "data-offset="80"" JE POSUNUTIE, KEDY SA MÁ MENIŤ AKTÍVNY ODKAZ V SCROLLSPY VZHĽADOM NA KONTENTU$ -->
+
+<script 
+    src="../../javascript/script.js">
+</script>
+
+</html>

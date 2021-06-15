@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CONFT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../style/style_ccna_chapters.css">
+
+    <!-- $IKONA V TABE V BROWSERI -->
+    <link rel="shortcut icon" href="../../images/logo/logo_tab_icon.png" type="image/x-icon">
+    <!-- IKONA V TABE V BROWSERI$ -->
+    
+    <script>
+        $(function () 
+        {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+    <!-- $HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/logo/logo.png" alt="logo" style="width:50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about_author.html">About author</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ccna1/ccna1.html">CCNA 1</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="ccna2.html">CCNA 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="popover" data-placement="bottom" title="CCNA 3 v7.0" 
+                    data-content="This course is already in progress. Stay tuned.">CCNA 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE$ -->
+
+    
+    <div class="bd-toc">
+        <div class="container-fluid">
+            <div class="row">
+            
+                <!-- $SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU -->
+                <nav class="col-3" id="myScrollspy">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1">Switching in Networking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">The Switch Learn and Forward Method</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Store-and-Forward Switching</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">Cut-Through Switching</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU$ -->
+
+                <!-- $KONTENT -->
+                <div class="col-lg-9 col-sm-12 chapter-content">
+                    <h1 class="text-white display-4">Chapter 2 - Switching Concepts</h1>
+                    <h1 class="nadpis-h1-vynimka">Frame Forwarding</h1>
+
+                    <div id="section1" class="text-justify">    
+                        <h2>Switching in Networking</h2>
+                        <p>The decision on how a switch forwards traffic is made based on the flow of that traffic.</p>
+                        <p>Two terms associated with the frames entering and leaving an interface:</p>
+                        <ul>
+                            <li>ingress</li>
+                            <ul>
+                                <li>port where a frame enters the device</li>
+                            </ul>
+                            <li>egress</li>
+                            <ul>
+                                <li>port where frame use when leaving the device</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div id="section2" class=""> 
+                        <h2>The Switch Learn and Forward Method</h2>
+                        <ul>
+                            <li>Step 1: Learn - Examining the Source MAC Address</li>
+                            <ul>
+                                <li>switch add source MAC address and incoming port to number to the table</li>
+                                <li>if MAC address does exist in table, switch will refresh timer for that entry </li>
+                                <li>if MAC address does exist but on different port —> refresh entry with current port </li>
+                                <br>
+                            </ul>
+                            <li>Step 2: Forward - Examining the Destination MAC Address</li>
+                            <ul>
+                                <li>MAC is in table - done</li>
+                                <li>MAC is not in table —> frame is forwarded to all port except incoming</li>
+                            </ul>
+                        </ul>
+                    </div>        
+
+                    <div id="section3" class="">         
+                        <h2>Store-and-Forward Switching</h2>
+                        <ul>
+                            <li>Error checking</li>
+                            <ul>
+                                <li>after receiving the entire frame on the ingress port, the switch compares the FCS of datagram with its own FCS calculations</li>
+                                <li>error-free —> frame is forwarded</li>
+                                <br>
+                            </ul>
+                            <li>Automatic buffering</li>
+                            <ul>
+                                <li>support any mix of Ethernet speeds</li>
+                                <li>ex - ingress port is 100 Mbps, switch stores it into buffer, check FCS and forward to egress port with 1Gbps</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div id="section4" class="">         
+                        <h2>Cut-Through Switching</h2>
+                        <li>not checking for errors</li>
+                        <li>forward frame as soon as looking up the destination MAC address</li>
+                        <li>fragment-free switching is C-T switching with better error checking with no increase in latency</li>
+                    </div>
+                    <!-- $STAV ŠTÚDIA CHAPTERU -->
+                    <div class="state-buttons">
+                        <button type="button" class="btn btn-outline-success done btn-lg" id="tl5" data-toggle="modal" data-target="#modalStateDone">Done</button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalStateDone" role="dialog">
+                            <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 style="color: black;" class="modal-title">Are you really done with this chapter?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color: black;">
+                                            If you are really done with this chapter click "Yes, I am done". Then we can
+                                            decide if you are ready for the final test.
+                                            If you are not done with this chapter click "Close".
+                                        </p>
+                                        <button onclick="chapterDone()" style="margin-left: 10px;" class="btn btn-dark chapterDone" role="button" id="chapterDone">Yes, I am done</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- STAV ŠTÚDIA CHAPTERU$ -->
+                </div>
+                <!-- KONTENT$-->
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-primary text-white text-center text-lg-start footer">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background: linear-gradient(to bottom,#ffbb59 0%, #ff654d 100%)">
+            © 2021 Copyright: René Martin Kuda, SPŠT Spišská Nová Ves, IST, 3.D
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+<!-- BODY UPRAVENÉ PRE SCROLLSPY, "data-offset="80"" JE POSUNUTIE, KEDY SA MÁ MENIŤ AKTÍVNY ODKAZ V SCROLLSPY VZHĽADOM NA KONTENTU$ -->
+
+<script 
+    src="../../javascript/script.js">
+</script>
+
+</html>
