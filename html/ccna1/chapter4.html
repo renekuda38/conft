@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CONFT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../style/style_ccna_chapters.css">
+
+    <!-- $IKONA V TABE V BROWSERI -->
+    <link rel=" shortcut icon" href="../../images/logo/logo_tab_icon.png" type="image/x-icon">
+    <!-- IKONA V TABE V BROWSERI$ -->
+
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+    <!-- $HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/logo/logo.png" alt="logo" style="width:50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about_author.html">About author</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="ccna1.html">CCNA 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ccna2/ccna2.html">CCNA 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="popover" data-placement="bottom" title="CCNA 3 v7.0"
+                        data-content="This course is already in progress. Stay tuned.">CCNA 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE$ -->
+
+
+    <div class="bd-toc">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- $SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU -->
+                <nav class="col-3" id="myScrollspy">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1">Advantages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">Optical Fiber</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Fiber-Optic Cable</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">Design of cable</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section5">Fiber vs Copper</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU$ -->
+
+                <!-- $KONTENT-->
+                <div class="col-lg-9 col-sm-12 chapter-content">
+                    <h1 class="text-white display-4" id="chapterTitle">Chapter 4 - Network Access</h1>
+                    <h1 class="nadpis-h1-vynimka">Fiber-Optic Cabling</h1>
+
+                    <div id="section1" class="text-justify">
+                        <h2>Advantages</h2>
+                        <p>Advantages of Fiber-Optic Cabling are:</p>
+                        <ul>
+                            <li>long distance traveling</li>
+                            <li>high bandwidth</li>
+                            <li>signal with less attenuation</li>
+                            <li>completely immune to EMI, RFI</li>
+                        </ul>
+                    </div>
+
+                    <div id="section2" class="">
+                        <h2>Optical Fiber</h2>
+                        <p>Optical Fiber is:</p>
+                        <ul>
+                            <li>extremely thin</li>
+                            <li>transparent pure glass</li>
+                        </ul>
+                        <p>Bits in optical fiber are transfered as light impulses</p>
+                    </div>
+
+                    <div id="section3" class="">
+                        <h2>Fiber-Optic Cable</h2>
+                        <p>This cable transmit data in the light - there is minumum loss of signal. <br>
+                            It looks like WC roll with the mirror inside of it and small laser
+                            send Morse code to it with speed of light.
+                        </p>
+                    </div>
+
+                    <div id="section4" class="">
+                        <h2>Design of cable</h2>
+                        <img src="../../images/ccna1/chapter4/fiber_optic_cable.jpg" class="img-fluid" style="max-width: 100%; height: auto" alt="Design of fiber-optic cable">
+                    </div>
+
+                    <div id="section5" class="">
+                        <h2>Fiber vs Copper</h2>
+                        <table class="table table-dark">
+                            <thead>
+                                <tr class="color1">
+                                    <th>Implementation Issues</th>
+                                    <th>UTP Cabling</th>
+                                    <th>Fiber-optic Cabling</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="color2">
+                                    <td>Bandwidth supported</td>
+                                    <td>10 Mb/s - 10 Gb/s</td>
+                                    <td>10 Mb/s - 100 Gb/s</td>
+                                </tr>
+                                <tr class="color1">
+                                    <td>Distance</td>
+                                    <td>Short (1 - 100 m)</td>
+                                    <td>High (1 - 100 000 m)</td>
+                                </tr>
+                                <tr class="color2">
+                                    <td>Immunity to EMI and RFI</td>
+                                    <td>Low</td>
+                                    <td>Completely immune</td>
+                                </tr>
+                                <tr class="color1">
+                                    <td>Media and connector cost</td>
+                                    <td>Lowest</td>
+                                    <td>Highest</td>
+                                </tr>
+                                <tr class="color2">
+                                    <td>Installation skills required</td>
+                                    <td>Lowest</td>
+                                    <td>Highest</td>
+                                </tr>
+                                <tr class="color1">
+                                    <td>Safety precautions</td>
+                                    <td>Lowest</td>
+                                    <td>Highest</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- $STAV ŠTÚDIA CHAPTERU -->
+                    <div class="state-buttons">
+                        <button type="button" class="btn btn-outline-success done btn-lg" id="tl2" data-toggle="modal" data-target="#modalStateDone">Done</button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalStateDone" role="dialog">
+                            <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 style="color: black;" class="modal-title">Are you really done with this chapter?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color: black;">
+                                            If you are really done with this chapter click "Yes, I am done". Then we can
+                                            decide if you are ready for the final test.
+                                            If you are not done with this chapter click "Close".
+                                        </p>
+                                        <button onclick="chapterDone()" style="margin-left: 10px;" class="btn btn-dark chapterDone" role="button" id="chapterDone">Yes, I am done</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- STAV ŠTÚDIA CHAPTERU$ -->
+                </div>
+                <!-- KONTENT$-->
+            </div>
+        </div>
+    </div>
+
+
+        <footer class="bg-primary text-white text-center text-lg-start footer">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background: linear-gradient(to bottom,#ffbb59 0%, #ff654d 100%)">
+                © 2021 Copyright: René Martin Kuda, SPŠT Spišská Nová Ves, IST, 3.D
+            </div>
+            <!-- Copyright -->
+        </footer>
+
+</body>
+<!-- BODY UPRAVENÉ PRE SCROLLSPY, "data-offset="80"" JE POSUNUTIE, KEDY SA MÁ MENIŤ AKTÍVNY ODKAZ V SCROLLSPY VZHĽADOM NA KONTENTU$ -->
+
+<script 
+    src="../../javascript/script.js">
+</script>
+
+</html>

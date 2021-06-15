@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CONFT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../style/style_ccna_chapters.css">
+
+    <!-- $IKONA V TABE V BROWSERI -->
+    <link rel="shortcut icon" href="../../images/logo/logo_tab_icon.png" type="image/x-icon">
+    <!-- IKONA V TABE V BROWSERI$ -->
+
+    <script>
+        $(function () 
+        {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="80">
+
+    <!-- $HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/logo/logo.png" alt="logo" style="width:50px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../about_author.html">About author</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link active" href="ccna1.html">CCNA 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../ccna2/ccna2.html">CCNA 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="popover" data-placement="bottom" title="CCNA 3 v7.0" 
+                    data-content="This course is already in progress. Stay tuned.">CCNA 3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../test.html">Test</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE$ -->
+    
+    <div class="bd-toc">
+        <div class="container-fluid">
+            <div class="row">
+            
+                <!-- $SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU -->
+                <nav class="col-3" id="myScrollspy">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#section1">Ethernet Encapsulation</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">MAC Sublayer</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">Ethernet Frame Fields</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">LLC and MAC</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- SCROLLSPY - NAVIGÁCIA PRE OBSAH KONTENTU$ -->
+                
+                <!-- $KONTENT -->
+                <div class="col-lg-9 col-sm-12 chapter-content">
+                    <h1 class="text-white display-4">Chapter 5 - Ethernet</h1>
+                    <h1 class="nadpis-h1-vynimka">Ethernet Frame</h1>
+                    <div id="section1" class="text-justify">    
+                        <h2>Ethernet Encapsulation</h2>
+                        <p>Ethernet operate at</p>
+                        <ul>
+                            <li>data link layer (Ethernet defines protocols)</li>
+                            <li>physical layer (Ethernet defines technologies)</li>
+                        </ul>
+                        <p>Bandwidth range is from 10 Mb/s up to 100 000 Mb/s</p>
+                        <h4>What does Ethernet rely on?</h4>
+                        <ul>
+                            <li>LLC</li>
+                            <ul>
+                                <li>handles the communication between upper and lower layers</li>
+                                <li>typically between the networking software and the device hardware</li>
+                                <li>it is implemented in software </li>
+                            </ul>
+                            <li>MAC</li>
+                            <ul>
+                                <li>implemented by hardware (in computer NIC)</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div id="section2" class=""> 
+                        <h2>MAC Sublayer</h2>
+                        <h4>Data encapsulation</h4>
+                        <p>The data encapsulation process includes frame assembly before transmission, and frame disassembly upon reception of a frame. 
+                            In forming the frame, the MAC layer adds a header and trailer to the network layer PDU.
+                        </p>
+                        <ul>
+                            <li>Frame delimiting</li>
+                            <ul>
+                                <li>the framing process provides important delimiters that are used to identify a group of bits that make up a frame</li>
+                                <li>these delimiting bits provide synchronization between the transmitting and receiving nodes.</li>
+                            </ul>
+                            <li>Addressing</li>
+                            <ul>
+                                <li>these delimiting bits provide synchronization between the transmitting and receiving nodes</li>
+                            </ul>
+                            <li>Error detection</li>
+                            <ul>
+                                <li>each frame contains a trailer used to detect any errors in transmission </li>
+                            </ul>
+                            <li>Media access control</li>
+                            <ul>
+                                <li>responsible for the placement of frames in the media and removal of frames form the media</li>
+                                <li>it controls access to the media</li>
+                                <li>communicates directly with the physical layer</li>
+                            </ul>
+                        </ul>
+                    </div>        
+
+                    <div id="section3" class="">         
+                        <h2>Ethernet Frame Fields</h2>
+                        <p>This image shows fields of Ethernet Frame and their site.</p>
+                        <img src="../../images/ccna1/chapter5/eht-frames.gif" class="img-fluid" style="max-width: 100%; height: auto" alt="Ethernet Frame" height="214px" width="548px">
+                    </div>
+
+                    <div id="section4" class="">         
+                        <h2>LLC and MAC</h2>
+                        <table class="table table-dark">
+                            <thead>
+                                <tr class="color1">
+                                    <th>Hacker Characteristics</th>
+                                    <th>&nbsp;&nbsp;&nbsp;&nbsp;MAC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                    <th>&nbsp;&nbsp;&nbsp;&nbsp;LLC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="color2">
+                                    <td>Controls the network interface card through software drivers.</td>
+                                    <td></td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2705;</td>
+                                </tr>
+                                <tr class="color1">
+                                    <td>Works with the uuper layers to add applicatin information for delivery of data to higher to level protocols.</td>
+                                    <td></td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2705;</td>
+                                </tr>
+                                <tr class="color2">
+                                    <td>Works with HW to support bandwidth requirements and checks errors in the bits sent and received.</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2705;</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="color1">
+                                    <td>Controls access to the media through signaling and physical mediastandards requirements.</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2705;</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="color2">
+                                    <td>Supports Ethernet technology by using CSMA/CD or CSMA/CA.</td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2705;</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="color1">
+                                    <td>Remains relatively independent of physical equipment.</td>
+                                    <td></td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x2705;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- $STAV ŠTÚDIA CHAPTERU -->
+                    <div class="state-buttons">
+                        <button type="button" class="btn btn-outline-success done btn-lg" id="tl3" data-toggle="modal" data-target="#modalStateDone">Done</button>
+    
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalStateDone" role="dialog">
+                            <div class="modal-dialog">
+                            
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 style="color: black;" class="modal-title">Are you really done with this chapter?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p style="color: black;">
+                                            If you are really done with this chapter click "Yes, I am done". Then we can
+                                            decide if you are ready for the final test.
+                                            If you are not done with this chapter click "Close".
+                                        </p>
+                                        <button onclick="chapterDone()" style="margin-left: 10px;" class="btn btn-dark chapterDone" role="button" id="chapterDone">Yes, I am done</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- STAV ŠTÚDIA CHAPTERU$ -->
+                </div>
+                <!-- KONTENT$ -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-primary text-white text-center text-lg-start footer">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background: linear-gradient(to bottom,#ffbb59 0%, #ff654d 100%)">
+            © 2021 Copyright: René Martin Kuda, SPŠT Spišská Nová Ves, IST, 3.D
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+</body>
+<!-- BODY UPRAVENÉ PRE SCROLLSPY, "data-offset="80"" JE POSUNUTIE, KEDY SA MÁ MENIŤ AKTÍVNY ODKAZ V SCROLLSPY VZHĽADOM NA KONTENTU$ -->
+
+<script 
+    src="../../javascript/script.js">
+</script>
+
+</html>
