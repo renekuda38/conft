@@ -1,0 +1,102 @@
+/* CSS PRE PODSTRÁNKU "About author" */
+
+
+body 
+{
+    background-color: black;
+    /* ODSTUP FOOTERA OD info */ 
+    margin-bottom: 30px; 
+}
+
+html 
+{
+    /* PRE FUNGOVANIE STICKY FOOTERA*/
+    position: relative;
+    min-height: 96.5%;
+}
+
+.navbar 
+{
+    background-color: black;
+}
+
+.nav-pills .active
+/*  FARBA AKTÍVNEHO TABU V NAVIGÁCII A JEHO ZAOBLENIE */
+{
+    background: linear-gradient(to bottom, #ffbb59 0%, #ff654d 100%);
+    border-radius: 2%;
+}
+
+.nadpis
+{
+    margin-top: 5em;
+}
+
+.row.first-row
+/* RIADOK GRIDU - TABY CCNA1...3 - ICH ODSADENIE */
+{
+    margin-top: 6em;
+    margin-right: 20em;
+    margin-left: 20em;
+}
+
+div.row h2, h4, p, li, a
+{
+    color: white;
+}
+
+.info 
+/* INFORMÁCIE O AUTOROVI V BIELOM PÁSE */
+{
+    margin-top: 4em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.info p 
+{
+    padding-top: 0.2em;
+}
+
+#footerTest
+{
+    padding-bottom: 50px;
+}
+
+footer
+{
+    /* STICKY FOOTER */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 25px;
+    line-height: 25px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+
+@media screen and (max-width: 1300px) 
+{
+    .row.first-row
+    /* ODSADENIE KONTENTU */
+    {
+        margin-top: 6em;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+}
+
+@media screen and (max-width: 414px) 
+{
+    .row.first-row
+    /* ZMENŠENIE ODSEDENIA KONTENTU (TEXTU) OD ĽAVÉHO OKRAJA */
+    {
+        margin-left: 0px;
+    }
+    html
+    /* POSUNUTIE FOOTRA SMEROM DOLE */
+    {
+        min-height: 91%;
+    }
+}

@@ -1,0 +1,147 @@
+/* CSS PRE PODSTRÁNKY CCNA 1 A CCNA 2 */
+
+
+body 
+{
+    background-color: black;
+    /* ODSTUP FOOTERA OD info */ 
+    margin-bottom: 30px; 
+}
+
+html 
+{
+    /* PRE FUNGOVANIE STICKY FOOTERA*/
+    position: relative;
+    min-height: 96.5%;
+}
+
+.navbar 
+{
+    background-color: black;
+}
+
+.nav-pills .active
+/*  FARBA AKTÍVNEHO TABU V NAVIGÁCII A JEHO ZAOBLENIE */
+{
+    background: linear-gradient(to bottom, #ffbb59 0%, #ff654d 100%);
+    border-radius: 2%;
+}
+
+.carousel-inner
+{
+    margin-top: 75px;
+}
+
+.nadpis
+/* NADPIS CHAPTERU */
+{
+    margin-top: 5em;
+}
+
+.row.first-row
+/* RIADOK GRIDU - TABY CCNA1...3 - ICH ODSADENIE */
+{
+
+    margin: 2.5em 3em 1em 4em;
+}
+
+.row.second-row
+{
+    margin: 1em 3em 6.5em 4em;
+}
+
+.white 
+/* FARBY NADPISU H4 - POUŽITÝ JE V TABOCH CHAPTER "X" POD-NÁZVE DANÉHO MODULU */
+{
+    color: white;
+}
+
+#tl
+/* TLAČIDLÁ "Start learning" */
+{
+    margin-bottom: 1em;
+    margin-top: 0.5em;
+}
+
+.info 
+/* INFORMÁCIE O AUTOROVI V BIELOM PÁSE */
+{
+    margin-top: 3em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.info p 
+{
+    padding-top: 0.2em;
+}
+
+footer
+{
+    /* STICKY FOOTER */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 25px;
+    line-height: 25px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 1005px) 
+{
+    /* PRI ZMENŠENÍ ŠÍRKY SA ULOŽIA TABY CCNA POD SEBA */
+    .col-lg-4.col-sm-12
+    {
+        /* MEDZERY MEDZI TABMI CCNA PRI USPORIADANÍ POD SEBA */
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 437px) 
+{
+    /* NÁZOV MODULU SA ZMENŠÍ PRI ŠÍRKE <437px */
+    .display-4
+    {
+        font-size: 48px;
+    }
+}
+
+/* $CHAPTER X SA ZMENŠUJE */
+@media screen and (max-width: 907px) 
+{
+    .display-3
+    {
+        font-size: 54px;
+    }
+}
+
+@media screen and (max-width: 414px) 
+{
+    /*SCROLLSPY SA NEZOBRAZI PRI ŠÍRKE <1350px */
+    .display-3
+    {
+        font-size: 32px;
+    }
+}
+/* CHAPTER X SA ZMENŠUJE$ */
+
+@media screen and (max-width: 1419px) 
+{
+    /* ZMENŠENIE VEĽKÉHO TEXTU V CAROUSELI */
+    .display-2
+    {
+        font-size: 52px;
+    }
+}
+
+@media screen and (max-width: 801px) 
+{
+    /* PRI ZMENŠENÍ ŠÍRKY SA ULOŽIA TABY CCNA POD SEBA */
+    .row.row.first-row, .row.second-row
+    /* RIADOK GRIDU - TABY CCNA1...3 - ICH ODSADENIE */
+    {
+        margin-right: 0em;
+        margin-left: 0em;
+    }
+}

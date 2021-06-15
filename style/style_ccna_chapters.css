@@ -1,0 +1,122 @@
+/* CSS PRE CCNA CHAPTERS (OBSAHOVÉ PODSTRÁNKY) */
+
+
+body 
+{
+    background-color: black;
+    /* ODSTUP FOOTERA OD info */ 
+    margin-bottom: 120px; 
+}
+
+html 
+{
+    /* PRE FUNGOVANIE STICKY FOOTERA */
+    position: relative;
+    min-height: 96.5%;
+}
+
+.navbar 
+{
+    background-color: black;
+}
+
+.nav-pills .active
+{
+    /*  FARBA AKTÍVNEHO TABU V NAVIGÁCII A JEHO ZAOBLENIE */
+    background: linear-gradient(to bottom, #ffbb59 0%, #ff654d 100%);
+    border-radius: 2%;
+}
+
+.flex-column 
+/* SCROLLSPY - POZÍCIA LISTU NAVIGÁCIE*/
+{
+  top: 20px;
+  position: fixed;
+  margin-top: 60px;
+}
+
+div.chapter-content
+/* ODSADENIE KONTENTU OD NAVIGÁCIE */
+{
+  margin-top: 70px;
+}
+
+div.chapter-content h2, h4, p, li, img, video, table, 
+/* PODNADPIS, POD NÁZVOM CHAPTERU */.nadpis-h1-vynimka
+{
+    margin-left: 10px;
+    color: white;
+}
+
+.nav-item a
+/* FARBA TEXTU (ODKAZU) V SCROLLSPY */
+{
+    color: rgb(255, 102, 83);
+}
+
+.nav-link
+/* POPOVER TITLE (CCNA 3) - "CCNA 3 v7.0" */
+{
+    color: black;
+}
+
+/* FARBY TABUĽKY*/
+.color1 
+{
+    background: linear-gradient(to bottom, #ffbb59 0%, #ff654d 100%);
+}
+.color2
+{
+    background: linear-gradient(to bottom, #ffbb59 0%, #ffffff 100%);
+    color: black;
+}
+
+video 
+{
+    width: 50%;
+    height: auto;
+}
+
+.state-buttons
+{
+    margin-top: 50px;
+}
+
+footer
+{
+    /* STICKY FOOTER */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 25px;
+    line-height: 25px; /* Vertically center the text there */
+    background-color: #f5f5f5;
+}
+
+@media screen and (max-width: 1350px) 
+{
+    /*SCROLLSPY SA NEZOBRAZI PRI ŠÍRKE <1350px */
+    #myScrollspy
+    {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 437px) 
+{
+    /* ZMENŠENIE NADPISU CHAPTERU */
+    .display-4
+    {
+        font-size: 48px;
+    }
+}
+
+@media screen and (max-width: 1112px) 
+{
+    /* ZMENŠENIE VIDEO */
+    video
+    {
+        width: 100%;
+    }
+}
