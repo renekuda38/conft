@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CONFT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style/style_realtest.css">
+    <link rel="stylesheet" href="../style/style_about.css">
+
+    <!-- $IKONA V TABE V BROWSERI -->
+    <link rel="shortcut icon" href="../images/logo/logo_tab_icon.png" type="image/x-icon">
+    <!-- IKONA V TABE V BROWSERI$ -->
+
+    <script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+
+<body>
+    <div>
+        <!-- $HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo/logo.png" alt="logo" style="width:50px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about_author.html">About author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/ccna1/ccna1.html">CCNA 1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/ccna2/ccna2.html">CCNA 2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="popover" data-placement="bottom" title="CCNA 3 v7.0"
+                            data-content="This course is already in progress. Stay tuned.">CCNA 3</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="test.html">Test</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- HORNÁ NAVIGÁCIA, "FIXED TOP" = PRI SKROLOVANÍ OSTÁVA HORE$ -->
+
+        <!-- $KONTENT -->
+        <div class="bd-toc">
+            <div class="container-fluid">
+                <div class="row first-row">
+                    <div class="col-12 container">
+                        <div class="score">
+                            <!--<span id="total-score"></span>-->
+                            <span id="user-score"></span>
+                        </div>
+
+                        <div class="content" id="question-area">
+                            <div id="question-text"></div>
+                            <div class="options">
+                                <button class="btn btn-option" id="True">True</button>
+                                <button class="btn btn-option" id="False">False</button>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <button class="btn btn-restart" id="restart">Restart</button>
+                            <button class="btn btn-prev" id="prev">Prev</button>
+                            <button class="btn btn-next" id="next">Next</button>
+                            <button class="btn btn-submit" id="submit">Submit</button>
+                        </div>
+                    </div>
+                    <div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- KONTENT$ -->
+
+    <footer class="bg-primary text-white text-center text-lg-start">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background: linear-gradient(to bottom,#ffbb59 0%, #ff654d 100%)">
+            © 2021 Copyright: René Martin Kuda, SPŠT Spišská Nová Ves, IST, 3.D
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="../javascript/test.js">
+
+    </script>
+
+</body>
+
+</html>
